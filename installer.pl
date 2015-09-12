@@ -27,7 +27,7 @@ use File::Temp qw(tempdir);
 use File::Basename qw(basename);
 use Cwd qw(cwd);
 
-my $TOOL_VERSION = "0.1";
+my $TOOL_VERSION = "0.2";
 my $ORIG_DIR = cwd();
 my $TMP_DIR = tempdir(CLEANUP=>1);
 use strict;
@@ -43,11 +43,11 @@ my %DEPS = (
 );
 
 my %VER = (
-    "abi-tracker"             => "1.0",
-    "abi-monitor"             => "1.0",
+    "abi-tracker"             => "1.1",
+    "abi-monitor"             => "1.1",
     "abi-dumper"              => "0.99.10",
     "vtable-dumper"           => "1.1",
-    "abi-compliance-checker"  => "1.99.10",
+    "abi-compliance-checker"  => "1.99.11",
     "pkgdiff"                 => "1.6.4"
 );
 
@@ -156,7 +156,6 @@ sub check_Cmd($)
             return 1;
         }
     }
-    print "$Cmd\n";
     return 0;
 }
 
@@ -296,8 +295,9 @@ sub scenario()
             }
             elsif($Dep eq "libelf")
             {
-                if(not -e "/usr/lib64/libelf.so"
-                and not -e "/usr/lib/libelf.so") {
+                my $Ldconfig = `/sbin/ldconfig -p 2>&1`;
+                
+                if($Ldconfig!~/libelf\.so/) {
                     $NotInstalled{$Dep} = 1;
                 }
             }
@@ -318,7 +318,7 @@ sub scenario()
         if($Target eq "abi-tracker"
         or $Target eq "abi-monitor")
         {
-            print "\nPlease install also necessary tools to build analysed libraries:\n  cmake\n  automake\n  scons\n  gcc\n  g++\n   etc.\n\n";
+            print "\nPlease install also necessary tools to build analysed libraries:\n  cmake\n  automake\n  scons\n  gcc\n  g++\n  etc.\n\n";
         }
     }
     
