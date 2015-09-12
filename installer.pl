@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 ###########################################################################
-# Installer 0.1
+# Installer 0.2
 # Install/remove tools and their dependencies
 #
 # Copyright (C) 2015 Andrey Ponomarenko's ABI Laboratory
