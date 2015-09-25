@@ -3,7 +3,7 @@ NAME:
   
     TOOL                    VERSION    URL
     abi-tracker             1.2        https://github.com/lvc/abi-tracker
-    abi-monitor             1.2        https://github.com/lvc/abi-monitor
+    abi-monitor             1.3        https://github.com/lvc/abi-monitor
     abi-dumper              0.99.10    https://github.com/lvc/abi-dumper
     abi-compliance-checker  1.99.12    https://github.com/lvc/abi-compliance-checker
     pkgdiff                 1.6.4      https://github.com/lvc/pkgdiff
