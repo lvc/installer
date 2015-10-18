@@ -1,5 +1,6 @@
 prefix ?= /usr
 
+.PHONY: install
 install:
 	perl installer.pl -install -prefix "$(prefix)" "$(target)"
 
