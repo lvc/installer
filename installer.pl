@@ -1,9 +1,9 @@
 #!/usr/bin/perl
 ###########################################################################
-# Installer 0.13
+# Installer 0.14
 # Install/remove tools and their dependencies
 #
-# Copyright (C) 2015-2016 Andrey Ponomarenko's ABI Laboratory
+# Copyright (C) 2015-2017 Andrey Ponomarenko's ABI Laboratory
 #
 # Written by Andrey Ponomarenko
 #
@@ -27,7 +27,7 @@ use File::Temp qw(tempdir);
 use File::Basename qw(basename);
 use Cwd qw(cwd);
 
-my $TOOL_VERSION = "0.13";
+my $TOOL_VERSION = "0.14";
 my $ORIG_DIR = cwd();
 my $TMP_DIR = tempdir(CLEANUP=>1);
 use strict;
@@ -47,7 +47,7 @@ my %VER = (
     "abi-monitor"             => "1.10",
     "abi-dumper"              => "0.99.19",
     "vtable-dumper"           => "1.2",
-    "abi-compliance-checker"  => "1.99.25",
+    "abi-compliance-checker"  => "2.0",
     "pkgdiff"                 => "1.7.2"
 );
 

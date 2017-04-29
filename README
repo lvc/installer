@@ -5,7 +5,7 @@ NAME:
     abi-tracker             1.9        https://github.com/lvc/abi-tracker
     abi-monitor             1.10       https://github.com/lvc/abi-monitor
     abi-dumper              0.99.19    https://github.com/lvc/abi-dumper
-    abi-compliance-checker  1.99.25    https://github.com/lvc/abi-compliance-checker
+    abi-compliance-checker  2.0        https://github.com/lvc/abi-compliance-checker
     pkgdiff                 1.7.2      https://github.com/lvc/pkgdiff
     vtable-dumper           1.2        https://github.com/lvc/vtable-dumper
 
