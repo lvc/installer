@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 ###########################################################################
-# Installer 0.14
+# Installer 0.15
 # Install/remove tools and their dependencies
 #
 # Copyright (C) 2015-2017 Andrey Ponomarenko's ABI Laboratory
@@ -27,7 +27,7 @@ use File::Temp qw(tempdir);
 use File::Basename qw(basename);
 use Cwd qw(cwd);
 
-my $TOOL_VERSION = "0.14";
+my $TOOL_VERSION = "0.15";
 my $ORIG_DIR = cwd();
 my $TMP_DIR = tempdir(CLEANUP=>1);
 use strict;
@@ -43,11 +43,11 @@ my %DEPS = (
 );
 
 my %VER = (
-    "abi-tracker"             => "1.9",
-    "abi-monitor"             => "1.10",
-    "abi-dumper"              => "0.99.19",
+    "abi-tracker"             => "1.10",
+    "abi-monitor"             => "1.11",
+    "abi-dumper"              => "1.0",
     "vtable-dumper"           => "1.2",
-    "abi-compliance-checker"  => "2.0",
+    "abi-compliance-checker"  => "2.1",
     "pkgdiff"                 => "1.7.2"
 );
 
@@ -318,7 +318,7 @@ sub scenario()
         if($Target eq "abi-tracker"
         or $Target eq "abi-monitor")
         {
-            print "\nPlease install also necessary tools to build analysed libraries:\n  cmake\n  automake\n  scons\n  gcc\n  g++\n  etc.\n\n";
+            print "\nPlease install also necessary tools to build analysed libraries:\n  cmake\n  automake\n  g++\n  ...\n\n";
         }
     }
     
