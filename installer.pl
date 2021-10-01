@@ -47,9 +47,9 @@ my %DEPS = (
 my %VER = (
     "abi-tracker"             => "1.11",
     "abi-monitor"             => "1.12",
-    "abi-dumper"              => "1.1",
+    "abi-dumper"              => "1.2",
     "vtable-dumper"           => "1.2",
-    "abi-compliance-checker"  => "2.2",
+    "abi-compliance-checker"  => "2.3",
     "pkgdiff"                 => "1.7.2"
 );
 
